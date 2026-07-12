@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sandesh Shrestha</h1>
+        <h2>Product Designer</h2>
+        <nav>
+            <ul>
+                <li><a href="#about">About & Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <img src="images/profile.png" alt="A professional headshot of the portfolio owner" width="200" height="200">
+
+            <p>Bridging the gap between high-end visual aesthetics and technical project workflows. Analytical Product Designer with a foundation in IT, focusing on Performance Design and digital systems.</p>
+
+            <h3>Skills & Technologies</h3>
+            <dl>
+                <dt><strong>HTML5</strong></dt>
+                <dd>Proficient in writing accessible and semantic markup.</dd>
+
+                <dt><strong>Version Control</strong></dt>
+                <dd>Experienced in using Git and GitHub for collaborative project management.</dd>
+
+                <dt><strong>System Design</strong></dt>
+                <dd>Familiar with RESTful API structures and database schema design.</dd>
+            </dl>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article>
+                <h3>Pomodesh - A Pomodoro Timer</h3>
+                <p>Pomodesh is designed to help you manage your time and increase productivity by using the Pomodoro technique..</p>
+                <p>Repository: <a href="https://github.com/Neyywaar/Pomodesh" target="_blank">View on GitHub</a></p>
+                <p>View Live: <a href="https://pomodesh.netlify.app/" target="_blank">Pomodesh</a></p>
+            </article>
+
+            <article>
+                <h3>Cursor Tracker</h3>
+                <p>Cursor Tracker allows you to easily track the coordinates of your mouse pointer on the webpage.</p>
+                <p>Repository: <a href="https://github.com/Neyywaar/Cursor-Tracker" target="_blank">View on GitHub</a></p>
+                <p>View Live: <a href="https://cursortracker.netlify.app/" target="_blank">Cursor Tracker</a></p>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <p>
+                    <label for="userName">Name:</label><br>
+                    <input type="text" id="userName" name="userName" required>
+                </p>
+                <p>
+                    <label for="userEmail">Email:</label><br>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                </p>
+                <p>
+                    <label for="userMessage">Message:</label><br>
+                    <textarea id="userMessage" name="userMessage" rows="5" cols="30" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Submit Message</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sandesh Shrestha. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
