@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- 1. Variables --- */
+:root {
+    --bg-base: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-line: #e2e8f0;
+    --fill-subtle: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    color: var(--text-main);
+    background-color: var(--bg-base);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- 2. Header --- */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    /* Aligns header elements with the 800px main container */
+    padding: 1rem 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-line);
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+.imp {
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+/* --- 3. Layout --- */
+body > h1 {
+    text-align: left;
+    margin: 7rem auto 3rem;
+    max-width: 800px;
+    padding: 0 20px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto 6rem;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    /* This gap standardizes the space between all sections */
+    gap: 6rem;
+}
+
+/* --- 4. Section Styling --- */
+section {
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: left;
+}
+
+section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--border-line);
+    padding-bottom: 1rem;
+    display: block;
+    width: 100%;
+}
+
+/* --- 5. About & Skills --- */
+#about {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0 4rem;
+    align-items: start;
+}
+
+#about h2 {
+    grid-column: 1 / -1;
+}
+
+#about img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+dl {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: left;
+    margin: 1rem 0 0 0;
+    padding: 0;
+}
+
+dl dt {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0 0 0.25rem 0;
+}
+
+dl dd {
+    margin: 0;
+    padding: 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* --- 6. Projects --- */
+
+/* #projects {
+    gap: 3rem;
+} */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 30rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--fill-subtle);
+    border: 1px solid transparent;
+    border-width: 0.1rem;
+    border-color: var(--border-line);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+article:hover {
+    border-color: var(--accent);
+}
+
+article h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+article p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+article a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+article a::after {
+    content: "→";
+    transition: transform 0.2s ease;
+}
+
+article a:hover::after {
+    transform: translateX(4px);
+}
+
+/* --- 7. Contact Form --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* max-width: 500px; */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    background-color: var(--fill-subtle);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    background-color: var(--bg-base);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+button {
+    width: 100%;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+}
+
+/* --- 8. Footer --- */
+footer {
+    padding: 2rem 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border-line);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- 9. Responsive --- */
+@media (max-width: 840px) {
+    header { padding: 1.25rem 20px; }
+}
+
+@media (max-width: 768px) {
+    body > h1 { font-size: 2.5rem; margin-top: 4rem; }
+    main { gap: 4.5rem; }
+    #about { grid-template-columns: 1fr; gap: 2.5rem; }
+    #about img { max-width: 240px; }
+    .project-grid { grid-template-columns: 1fr; gap: 3rem; }
+    button { align-self: stretch; }
+}
